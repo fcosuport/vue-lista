@@ -20,7 +20,7 @@
         active-class=""
       >
       <div
-      v-for="tarefa, index in tarefas" :key="index"
+      v-for="tarefa, index in $store.state.tarefas" :key="index"
       >
         <Tarefa :tarefa="tarefa"/>
       </div>
@@ -42,22 +42,13 @@
     data() {
       return{
         campoInput: null,
-        tarefas: [
-          { titulo:"ir ao mercado", concluido:false },
-          { titulo:"ir ao mercado", concluido:false },
-          { titulo:"ir ao carrefour", concluido:false }
-        ]
       }
     },
     methods:{
       funcAddTarefa(){
-        if(this.campoInput){
-          this.tarefas.push({
-            titulo:this.campoInput,
-            concluido:false
-          })
-          this.campoInput = null
-        }
+        this.$store.commit('adicionaTarefa',this.campoInput)
+        this.campoInput = null
+        
       }
     }
   }

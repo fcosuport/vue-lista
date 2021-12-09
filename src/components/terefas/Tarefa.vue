@@ -15,15 +15,31 @@
           class="text-h6"
           >{{tarefa.titulo}}</v-list-item-title>
         </v-list-item-content>
+
+        <v-list-item-action>
+          <v-btn 
+          icon
+          @click.stop="funcRemoveTarefa(tarefa.id)"
+          >
+            <v-icon color="grey darken-1">mdi-dots-vertical</v-icon>
+          </v-btn>
+        </v-list-item-action>
       </template>
     </v-list-item> 
+    <v-divider></v-divider>
   </div>
   
 </template>
 
 <script>
 export default {
-  props: ['tarefa']
+  props: ['tarefa'],
+  methods:{
+    funcRemoveTarefa(id){
+      this.$store.commit('removeTarefa', id)
+
+    }
+  }
 
 }
 </script>
