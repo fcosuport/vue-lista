@@ -98,7 +98,7 @@
 <script>
   export default {
     data: () => ({
-      drawer: true,
+      drawer: null,
       items: [
         { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },
         { title: 'Sobre', icon: 'mdi-help-box', to:'/sobre' },
