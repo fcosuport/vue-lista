@@ -10,16 +10,23 @@
       v-model="drawer"
       app
     >
+    <v-img
+    src="./assets/logopratico.jpg"
+    gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+    dark
+    class="pt-5 text-center"
+    >
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Prático Sistemas
-          </v-list-item-title>
-          <v-list-item-subtitle>
             Lista de Tarefas
-          </v-list-item-subtitle>
+          </v-list-item-title>
+          <!--<v-list-item-subtitle>
+            Lista de Tarefas
+          </v-list-item-subtitle>-->
         </v-list-item-content>
       </v-list-item>
+    </v-img>
 
       <v-divider></v-divider>
 
@@ -91,7 +98,7 @@
 <script>
   export default {
     data: () => ({
-      drawer: null,
+      drawer: true,
       items: [
         { title: 'Tarefas', icon: 'mdi-view-dashboard', to:'/' },
         { title: 'Sobre', icon: 'mdi-help-box', to:'/sobre' },
