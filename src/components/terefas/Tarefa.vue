@@ -2,7 +2,7 @@
   <div>
     <v-list-item
     :class="{'green lighten-4':tarefa.concluido}"
-    @click="tarefa.concluido = !tarefa.concluido"
+    @click="$store.dispatch('concluirTarefa', tarefa)"
     >
       <template v-slot:default="{}">
         <v-list-item-action>
