@@ -12,7 +12,7 @@
         <v-list-item-content>
           <v-list-item-title
           :class="{'text-decoration-line-through' :tarefa.concluido}"
-          class="text-h6"
+          class="font-weight-medium"
           >{{tarefa.titulo}}</v-list-item-title>
         </v-list-item-content>
 

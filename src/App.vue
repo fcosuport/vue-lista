@@ -72,9 +72,15 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Lista de Tarefas</v-app-bar-title>
+      <center>
+        <v-app-bar-title
+        >
+          Lista de Tarefas
+          <InputTarefa/>
+        </v-app-bar-title>
+      </center>
 
-      <v-spacer></v-spacer>
+      <!--<v-spacer></v-spacer>
 
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -86,7 +92,7 @@
 
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      </v-btn>-->
     </v-app-bar>
 
     <v-main>
@@ -96,7 +102,9 @@
 </template>
 
 <script>
+import InputTarefa from './components/InputTarefa.vue'
   export default {
+  components: { InputTarefa },
     data: () => ({
       drawer: null,
       items: [
